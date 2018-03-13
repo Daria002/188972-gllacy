@@ -1,0 +1,268 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #849d8f;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-logo {
+  display: inline-block;
+  margin-top: 9px;
+  margin-left: 27px;
+}
+
+.main-nav .topmenu {
+  line-height: 18px;
+  list-style: none;
+}
+
+.main-nav .topmenu-item {
+  display: inline-block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-right: 28px; /*проверить потом. что-то не то*/
+}
+
+.main-nav .submenu {
+  list-style: none;
+}
+
+.submenu .submenu-item {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+.user-navigation {
+  list-style: none;
+}
+
+.user-navigation .search {
+  display: inline-block;
+  background-color: #f8f7f4;
+  padding: 20px 15px;
+  border-radius: 4px;
+}
+
+.user-navigation input[type="search"] {
+  width: 311px;
+  height: 44px;
+  border: 1px solid #d3d3d2;
+  border-radius: 4px;
+}
+
+.user-navigation .login,
+.user-navigation .basket {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+}
+
+.info .working-hours {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.info .phone {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.container h1 {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.slider p {
+  font-size: 60px;
+  line-height: 60.35px;
+}
+
+
+.btn {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.slide-btn {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.promo .promo-items-list {
+  list-style: none;
+}
+
+.promo-item:first-child {
+  background-image: url("../img/raspberry.jpg");
+}
+
+.promo-item:last-child {
+  background-image: url("../img/chocolate.jpg");
+}
+
+.promo-item h3 {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.promo-item p {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.filter legend,
+.filter .price,
+.filter .sorting {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.sorting-btn {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.filter label {
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.popular-items-list,
+.catalog-items-list {
+  list-style: none;
+}
+
+.popular-item .price,
+.catalog-item .price {
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.popular-item .small,
+.catalog-item .small {
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.popular-item .description,
+.catalog-item .description {
+  font-weight: 500;
+}
+
+.features {
+  background-image: url("../img/wafer.jpg");
+}
+
+.features-list {
+  list-style: none;
+}
+
+.features p {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #323232;
+}
+
+.features .features-item {
+  font-weight: normal;
+  color: #323232;
+}
+
+.blog {
+  background-image: url("../img/bg-strawberry.jpg");
+}
+
+.blog p {
+  font-weight: 500;
+  color: #323232;
+}
+
+.blog-article {
+  font-size: 24px;
+  line-height: 30px;
+  text-decoration: underline;
+  color: #323232;
+}
+
+.subscribe {
+  background-image: url("../img/bg-post.svg");
+}
+
+.subscribe p {
+  font-weight: normal;
+  color: #5a5a5a;
+}
+
+.subscribe input[type="email"] {
+  width: 368px;
+  height: 44px;
+  border: 1px solid #d3d3d2;
+  border-radius: 4px;
+}
+
+.contacts p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.contacts .address {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts .phone {
+  font-size: 18px;
+}
+
+.contacts .working-time {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.paginator a {
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.footer-documents {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.modal-login {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: normal;
+}
