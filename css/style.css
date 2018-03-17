@@ -11,41 +11,73 @@ body {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.header-logo {
-  display: inline-block;
-  margin-top: 9px;
-  margin-left: 27px;
+a:hover {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+a:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
 .main-nav .topmenu {
-  line-height: 18px;
   list-style: none;
 }
 
-.main-nav .topmenu-item {
+.topmenu .current-page {
+  background-color: #e74b36;
+}
+
+.topmenu-item a {
   display: inline-block;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  margin-right: 28px; /*проверить потом. что-то не то*/
+  line-height: 18px;
+}
+
+.topmenu-item a:hover {
+  color: #333333;
+  background-color: #f7f6f3;
 }
 
 .main-nav .submenu {
   list-style: none;
+  background-color: #f8f7f4;
 }
 
-.submenu .submenu-item {
+.submenu-item a {
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
+  color: #323232;
+}
+
+.submenu-item a:hover {
+  color: #e84d37;
+  border-bottom: 1px solid rgba(232, 77, 55, 0.3);
+}
+
+.submenu-item a:hover {
+  background-color: #fbded7;
+}
+
+.submenu-item a:active {
+  background-color: #f6b5a5;
+}
+
+.submenu-item.current-item {
+  background-color: #d07058;
+  color: white;
 }
 
 .user-navigation {
   list-style: none;
 }
 
-.user-navigation .search {
+/*.user-navigation .search { <!--красивая форма поиска-->
   display: inline-block;
   background-color: #f8f7f4;
   padding: 20px 15px;
@@ -56,12 +88,10 @@ a {
   width: 311px;
   height: 44px;
   border: 1px solid #d3d3d2;
-  border-radius: 4px;
+  border-radius: 4px;*/
 }
 
-.user-navigation .login,
-.user-navigation .basket {
-  display: inline-block;
+.user-navigation li { /*не работает*/
   background-color: rgba(255, 255, 255, 0.2);
   font-weight: 500;
 }
@@ -100,15 +130,65 @@ a {
 }
 
 
-.btn {
+.btn {  /*убрать стандартные стили кнопки. обводка*/
   font-size: 18px;
   line-height: 24px;
+  background-color: #e84d37;
+  background: linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  border-radius: 25px;
+  color: #ffffff;
+}
+
+.btn:hover {
+  background: linear-gradient(to top, rgb(236,111,94) 0%, rgb(245,134,105) 100%);
+}
+
+.btn:active {
+  background: linear-gradient(to top, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+}
+
+.btn-link {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #e84d37;
+  background: linear-gradient(to top, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  border-radius: 25px;
+  color: #ffffff;
+}
+
+.btn-link:hover {
+  background: linear-gradient(to top, rgb(236,111,94) 0%, rgb(245,134,105) 100%);
+  color: #ffffff;
+}
+
+.btn-link:active {
+  background: linear-gradient(to top, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
 }
 
 .slide-btn {
   font-size: 32px;
   line-height: 44px;
 }
+
+.sorting-btn {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: #ffffff;
+}
+
+.sorting-btn:hover {
+  background-color: #ffffff;
+  color: #323232;
+}
+
+.sorting-btn:active {
+  background-color: #eaeaea;
+  color: #323232;
+}
+
 
 .promo .promo-items-list {
   list-style: none;
@@ -149,6 +229,10 @@ a {
 .filter label {
   line-height: 18px;
   font-weight: 500;
+}
+
+.popular-items li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .popular-items-list,
@@ -210,7 +294,11 @@ a {
 }
 
 .subscribe {
-  background-image: url("../img/bg-post.svg");
+  background-image: url("../img/bg-post.svg"); /*градиент*/
+}
+
+.subscribe-wrapper {
+  background-color: #f8f7f4;
 }
 
 .subscribe p {
@@ -223,6 +311,16 @@ a {
   height: 44px;
   border: 1px solid #d3d3d2;
   border-radius: 4px;
+}
+
+.map .pin {
+  background-image: url("../img/pin.svg");
+  background-repeat: no-repeat;
+}
+
+.contacts {
+  background-color: rgba(255, 255, 255, 0.98);
+  color: #323232;
 }
 
 .contacts p {
@@ -250,19 +348,37 @@ a {
   font-weight: 500;
 }
 
+.paginator a:hover {
+  background-color: white;
+  color: #323232;
+}
+
+.paginator a:active {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
 .footer-documents {
   font-size: 13px;
   line-height: 18px;
   font-weight: normal;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-copyright {
   font-size: 12px;
   line-height: 18px;
+  font-weight: normal;
 }
 
 .modal-login {
   font-size: 13px;
   line-height: 24px;
   font-weight: normal;
+}
+
+.modal-feedback h2 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
 }
