@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  width: 1200px;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -9,101 +10,13 @@ body {
   background-color: #849d8f;
 }
 
-a {
-  text-decoration: none;
-  color: #ffffff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-a:hover {
-  color: #ffbc9e;
-  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
-}
-
-a:active {
-  color: #ffbc9e;
-  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
-}
-
-.main-nav .topmenu {
-  list-style: none;
-}
-
-.topmenu .current-page {
-  background-color: #e74b36;
-}
-
-.topmenu-item a {
-  display: inline-block;
-  line-height: 18px;
-}
-
-.topmenu-item a:hover {
-  color: #333333;
-  background-color: #f7f6f3;
-}
-
-.main-nav .submenu {
-  list-style: none;
-  background-color: #f8f7f4;
-}
-
-.submenu-item a {
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: normal;
-  color: #323232;
-}
-
-.submenu-item a:hover {
-  color: #e84d37;
-  border-bottom: 1px solid rgba(232, 77, 55, 0.3);
-}
-
-.submenu-item a:hover {
-  background-color: #fbded7;
-}
-
-.submenu-item a:active {
-  background-color: #f6b5a5;
-}
-
-.submenu-item.current-item {
-  background-color: #d07058;
-  color: white;
-}
-
-.user-navigation {
-  list-style: none;
-}
-
-/*.user-navigation .search { <!--красивая форма поиска-->
-  display: inline-block;
-  background-color: #f8f7f4;
-  padding: 20px 15px;
-  border-radius: 4px;
-}
-
-.user-navigation input[type="search"] {
-  width: 311px;
-  height: 44px;
-  border: 1px solid #d3d3d2;
-  border-radius: 4px;*/
-}
-
-.user-navigation li { /*не работает*/
-  background-color: rgba(255, 255, 255, 0.2);
-  font-weight: 500;
-}
-
-.info .working-hours {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.info .phone {
-  font-size: 22px;
-  line-height: 24px;
+.page-wrapper {
+  padding-left: 27px;
+  padding-right: 27px;
+  padding-top: 9px;
+  /*background-image: url(../img/slider1.png);
+  background-position: 50% 0%;
+  background-repeat: no-repeat;*/
 }
 
 .visually-hidden {
@@ -112,21 +25,6 @@ a:active {
   width: 1px;
   height: 1px;
   margin: -1px;
-}
-
-.breadcrumbs {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.container h1 {
-  font-size: 35px;
-  line-height: 41px;
-}
-
-.slider p {
-  font-size: 60px;
-  line-height: 60.35px;
 }
 
 
@@ -165,51 +63,228 @@ a:active {
   background: linear-gradient(to top, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
 }
 
+a {
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+a:hover {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+a:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-header ul {
+  padding: 0;
+  list-style: none;
+}
+
+.main-header .header-logo {  /*убрать подчеркивание с ссылки на лого*/
+
+}
+
+.main-header .main-nav {
+  flex-grow: 1;
+  margin-left: 24px;
+}
+
+.main-nav .topmenu {
+  display: flex;
+
+}
+
+.topmenu .current-page {
+  background-color: #e74b36;
+}
+
+.topmenu-item a {
+  display: inline-block;
+  line-height: 18px;
+  margin-right: 28px;
+  vertical-align: middle;
+
+}
+
+.topmenu-item a:hover {
+  color: #333333;
+  background-color: #f7f6f3;
+}
+
+.main-nav .submenu {
+  background-color: #f8f7f4;
+}
+
+.submenu-item a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  color: #323232;
+}
+
+.submenu-item a:hover {
+  color: #e84d37;
+  border-bottom: 1px solid rgba(232, 77, 55, 0.3);
+}
+
+.submenu-item a:hover {
+  background-color: #fbded7;
+}
+
+.submenu-item a:active {
+  background-color: #f6b5a5;
+}
+
+.submenu-item.current-item {
+  background-color: #d07058;
+  color: white;
+}
+
+.user-navigation ul {
+  display: flex;
+}
+
+/*.user-navigation .search { <!--красивая форма поиска-->
+  display: inline-block;
+  background-color: #f8f7f4;
+  padding: 20px 15px;
+  border-radius: 4px;
+}
+
+.user-navigation input[type="search"] {
+  width: 311px;
+  height: 44px;
+  border: 1px solid #d3d3d2;
+  border-radius: 4px;*/
+}
+
+.user-navigation li { /*не работает!!!*/
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+  padding: 0;
+}
+
+.info .working-hours {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.info .phone {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.breadcrumbs li {
+  position: relative;
+  margin-right: 22px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.breadcrumbs li:nth-child(2)::before,
+.breadcrumbs li:nth-child(3)::before {
+  content: "»";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: -15px;
+}
+
+.container h1 {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+
+
+/*#btn-1:checked ~ .page-wrapper {
+  background-color: #849d8f;
+  background-image: url("img/slider1.png");
+}
+
+#btn-2:checked ~ .page-wrapper {
+  background-color: #8996a6;
+  background-image: url("img/slider2.png");
+}
+
+#btn-3:checked ~ .page-wrapper {
+  background-color: #9d8b84;
+  background-image: url("img/slider3.png");
+}*/
+
+/*_________________________________Слайдер__________________________________*/
+
+.slider p {
+  margin-top: 273px;
+  text-align: center;
+  font-size: 60px;
+  line-height: 60.35px;
+}
+
 .slide-btn {
   font-size: 32px;
   line-height: 44px;
 }
 
-.sorting-btn {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid white;
-  color: #ffffff;
-}
-
-.sorting-btn:hover {
-  background-color: #ffffff;
-  color: #323232;
-}
-
-.sorting-btn:active {
-  background-color: #eaeaea;
-  color: #323232;
-}
-
+/*________________________________ПРОМО_____________________________________*/
 
 .promo .promo-items-list {
+  display: flex;
   list-style: none;
+  padding: 0;
+  min-height: 229px;
+}
+
+.promo .promo-item {
+  width: 560px;
+  padding: 18px 21px 23px 18px;
 }
 
 .promo-item:first-child {
+  margin-right: 13px;
   background-image: url("../img/raspberry.jpg");
 }
 
 .promo-item:last-child {
+  margin-left: 13px;
   background-image: url("../img/chocolate.jpg");
 }
 
 .promo-item h3 {
   font-size: 35px;
   line-height: 41px;
+  margin: 0;
 }
 
 .promo-item p {
   font-size: 18px;
   line-height: 22px;
+}
+
+.promo-btn {
+  float: right;
+
+}
+/*____________________________СОРТИРОВКА_________________________________*/
+
+.filter-form {
+  max-width: 880px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .filter legend,
@@ -231,13 +306,60 @@ a:active {
   font-weight: 500;
 }
 
-.popular-items li:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+.fat-form  li {
+  text-decoration: none;
+  display: inline-block;
 }
+
+.topping-form li {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.sorting-btn {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: #ffffff;
+}
+
+.sorting-btn:hover {
+  background-color: #ffffff;
+  color: #323232;
+}
+
+.sorting-btn:active {
+  background-color: #eaeaea;
+  color: #323232;
+}
+
+/*___________________________ТОВАРЫ_______________________________*/
 
 .popular-items-list,
 .catalog-items-list {
+  display: flex;
+  flex-wrap:wrap;
   list-style: none;
+  padding: 0;
+}
+
+.popular-item,
+.catalog-item {
+  margin-right: 13px;
+  margin-left: 13px;
+  max-width: 267px;
+}
+
+.popular-item:first-child,
+.catalog-item:first-child {
+  margin-left: 0;
+}
+
+.popular-image img,
+.catalog-image img {
+  border-radius: 50%;
 }
 
 .popular-item .price,
@@ -254,14 +376,24 @@ a:active {
 
 .popular-item .description,
 .catalog-item .description {
+  text-align: center;
   font-weight: 500;
 }
 
+.popular-items li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*___________________________ПРЕИМУЩЕСТВА_________________________________*/
 .features {
   background-image: url("../img/wafer.jpg");
+  margin-bottom: 40px;
 }
 
 .features-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -276,9 +408,18 @@ a:active {
   font-weight: normal;
   color: #323232;
 }
+/*________________________________БЛОГ_____________________________*/
+.blog-subscribe-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
 
 .blog {
   background-image: url("../img/bg-strawberry.jpg");
+  margin-right: 13px;
+  width: 560px;
+  min-height: 220px;
 }
 
 .blog p {
@@ -295,6 +436,9 @@ a:active {
 
 .subscribe {
   background-image: url("../img/bg-post.svg"); /*градиент*/
+  margin-left: 13px;
+  width: 560px;
+  min-height: 220px;
 }
 
 .subscribe-wrapper {
@@ -313,14 +457,34 @@ a:active {
   border-radius: 4px;
 }
 
+.map {
+  width: 1200px;
+  height: 640px;
+  background-image: url("../img/map.jpg");
+  position: relative;
+  left: -27px;
+}
+
 .map .pin {
   background-image: url("../img/pin.svg");
   background-repeat: no-repeat;
+  width: 80px;
+  height: 140px;
+  position: absolute;
+  top: 245px;
+  left: 265px;
 }
 
+/*__________________________ОКНО КОНТАКТОВ___________________________________*/
+
 .contacts {
+  position: absolute;
+  top: 59px;
+  right: 19px;
   background-color: rgba(255, 255, 255, 0.98);
   color: #323232;
+  width: 302px;
+  padding: 32px 25px;
 }
 
 .contacts p {
@@ -343,6 +507,15 @@ a:active {
   font-weight: normal;
 }
 
+.feedback-btn {
+  display: inline-block;
+  margin-top: 30px;
+}
+/*___________________________ПАГИНАТОР__________________________________*/
+.paginator {
+  /*float: right;*/
+}
+
 .paginator a {
   line-height: 18px;
   font-weight: 500;
@@ -356,6 +529,11 @@ a:active {
 .paginator a:active {
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
+}
+/*______________________________ФУТЕР__________________________________*/
+.page-footer {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-documents {
