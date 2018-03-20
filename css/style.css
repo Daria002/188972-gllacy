@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  width: 1200px;
+  min-width: 900px;
+  max-width: 1200px;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -10,13 +11,15 @@ body {
   background-color: #849d8f;
 }
 
+.main-page,
+.catalog-page {
+  margin: 0 auto;
+}
+
 .page-wrapper {
   padding-left: 27px;
   padding-right: 27px;
   padding-top: 9px;
-  /*background-image: url(../img/slider1.png);
-  background-position: 50% 0%;
-  background-repeat: no-repeat;*/
 }
 
 .visually-hidden {
@@ -27,8 +30,13 @@ body {
   margin: -1px;
 }
 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
-.btn {  /*убрать стандартные стили кнопки. обводка*/
+.btn {
   font-size: 18px;
   line-height: 24px;
   background-color: #e84d37;
@@ -182,7 +190,7 @@ a:active {
   font-size: 22px;
   line-height: 24px;
 }
-
+/*_________________________breadcrumbs_________________________*/
 .breadcrumbs {
   font-size: 14px;
   line-height: 16px;
@@ -203,30 +211,30 @@ a:active {
   height: 6px;
   left: -15px;
 }
+/*___________________________________________________________*/
 
 .container h1 {
   font-size: 35px;
   line-height: 41px;
+  margin-bottom: 50px;
 }
 
-
-
-/*#btn-1:checked ~ .page-wrapper {
-  background-color: #849d8f;
-  background-image: url("img/slider1.png");
-}
-
-#btn-2:checked ~ .page-wrapper {
-  background-color: #8996a6;
-  background-image: url("img/slider2.png");
-}
-
-#btn-3:checked ~ .page-wrapper {
-  background-color: #9d8b84;
-  background-image: url("img/slider3.png");
-}*/
 
 /*_________________________________Слайдер__________________________________*/
+
+.slider-slide {
+  text-align: center;
+}
+
+.slider-slides img {
+  position:absolute;
+  left: 50%;
+  z-index: -1;
+  width: 1045px;
+  height: 881px;
+  margin-top: -405.5px;
+  margin-left: -522.5px;
+}
 
 .slider p {
   margin-top: 273px;
@@ -244,14 +252,15 @@ a:active {
 
 .promo .promo-items-list {
   display: flex;
+  align-content: stretch;
   list-style: none;
   padding: 0;
   min-height: 229px;
 }
 
 .promo .promo-item {
-  width: 560px;
-  padding: 18px 21px 23px 18px;
+  padding: 18px 10px 23px 18px;
+  border-radius: 15px;
 }
 
 .promo-item:first-child {
@@ -295,10 +304,24 @@ a:active {
   font-weight: 500;
 }
 
-.sorting-btn {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
+.sorting-form,
+.price-form {
+  position: relative;
+}
+
+.sorting-form label,
+.price-form label {
+  position: absolute;
+  top: -20px;
+}
+
+.filter fieldset {
+  position: relative;
+}
+
+.filter legend {
+  position: absolute;
+  top: -20px;
 }
 
 .filter label {
@@ -340,26 +363,31 @@ a:active {
 .popular-items-list,
 .catalog-items-list {
   display: flex;
-  flex-wrap:wrap;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
+  margin-right: -13px;
+  margin-left: -13px;
+}
+
+.catalog-items-list {
+  flex-wrap: wrap;
 }
 
 .popular-item,
 .catalog-item {
+  max-width: 267px;
   margin-right: 13px;
   margin-left: 13px;
-  max-width: 267px;
-}
-
-.popular-item:first-child,
-.catalog-item:first-child {
-  margin-left: 0;
 }
 
 .popular-image img,
 .catalog-image img {
   border-radius: 50%;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+
 }
 
 .popular-item .price,
@@ -388,6 +416,8 @@ a:active {
 .features {
   background-image: url("../img/wafer.jpg");
   margin-bottom: 40px;
+  border-radius: 15px;
+  padding: 28px 19px;
 }
 
 .features-list {
@@ -398,10 +428,14 @@ a:active {
 }
 
 .features p {
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: 500;
-    color: #323232;
+  margin: 0;
+}
+
+.features p {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #323232;
 }
 
 .features .features-item {
@@ -417,9 +451,12 @@ a:active {
 
 .blog {
   background-image: url("../img/bg-strawberry.jpg");
+  background-position: 20% 40%;
   margin-right: 13px;
-  width: 560px;
-  min-height: 220px;
+  max-width: 560px;
+  min-height: 158px;
+  border-radius: 15px;
+  padding: 26px 10px;
 }
 
 .blog p {
@@ -427,22 +464,28 @@ a:active {
   color: #323232;
 }
 
-.blog-article {
+.blog a{
   font-size: 24px;
   line-height: 30px;
   text-decoration: underline;
   color: #323232;
 }
 
+
 .subscribe {
+  display: flex;
   background-image: url("../img/bg-post.svg"); /*градиент*/
   margin-left: 13px;
   width: 560px;
   min-height: 220px;
+  border-radius: 15px;
+  padding: 10px;
 }
 
 .subscribe-wrapper {
+  display: block;
   background-color: #f8f7f4;
+  border-radius: 15px;
 }
 
 .subscribe p {
@@ -459,8 +502,9 @@ a:active {
 
 .map {
   width: 1200px;
-  height: 640px;
+  height: 430px;
   background-image: url("../img/map.jpg");
+  background-position: 0px -107px;
   position: relative;
   left: -27px;
 }
@@ -471,7 +515,7 @@ a:active {
   width: 80px;
   height: 140px;
   position: absolute;
-  top: 245px;
+  top: 140px;
   left: 265px;
 }
 
@@ -513,8 +557,10 @@ a:active {
 }
 /*___________________________ПАГИНАТОР__________________________________*/
 .paginator {
-  /*float: right;*/
+  float: right;
+  margin-bottom: 30px;
 }
+
 
 .paginator a {
   line-height: 18px;

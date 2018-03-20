@@ -7,7 +7,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
-  <body>
+  <body class="catalog-page">
     <div class="page-wrapper">
       <header class="main-header">
         <a class="header-logo">
@@ -98,7 +98,7 @@
         <h2 class="visually-hidden">Фильтр поиска</h2>
   			<form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="feedback-form-group sorting-form">
-            <label for="sorting">Сортировка</label>
+            <label for="sorting">Сортировка:</label>
             <select name="sorting" id="sorting">
               <option value="popular">по популярности</option>
               <option value="low-price">сначала недорогие</option>
@@ -159,7 +159,7 @@
         </form>
   		</section>
 
-  		<section class="catalog">
+  		<section class="catalog clearfix">
   			<h2 class="visually-hidden">Каталог товаров</h2>
   			<ul class="catalog-items-list">
   				<li class="catalog-item">
@@ -259,7 +259,6 @@
             <button type="button" class="btn fast-btn">Быстрый просмотр</button>
   				</li>
   			</ul>
-      </section>
 
   		<div class="paginator">
   			<a class="prev disabled" href="#prev">Назад</a>
@@ -270,6 +269,7 @@
   			<a href="#5">5</a>
   			<a class="next" href="#next">Вперед</a>
   		</div>
+      </section>
 
   	</main>
 
