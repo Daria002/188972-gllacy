@@ -11,7 +11,6 @@ body {
 .site-wrapper {
   width: 100%;
   background-color: #849d8f;
-  background-image: url("../img/slider1.png");
   background-repeat: no-repeat;
   background-position: top center;
   transition: background-image 0.5s ease, background-color 0.5s ease;
@@ -490,7 +489,8 @@ a:active {
   margin-right: 26px;
 }
 
-.popular-item:nth-child(4n) {
+.popular-item:nth-child(4n),
+.catalog-item:nth-child(4n) {
   margin-right: 0;
 }
 
