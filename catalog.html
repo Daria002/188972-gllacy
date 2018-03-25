@@ -65,18 +65,21 @@
               <ul>
                 <li class="search">
                   <a href="#" aria-label="Поиск по сайту">
-                    Поиск
-                    <!--<input type="search" name="search" placeholder="Что ищем?">-->
                   </a>
+                  <div class="search-form">
+                  <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
+                    <input type="search" name="search" placeholder="Что ищем?">
+                  </form>
+                </div>
                 </li>
                 <li class="login">
                   <a href="#">
                     Вход
                   </a>
                 </li>
-                <li class="basket">
+                <li class="basket basket-full">
                   <a href="#">
-                    Пусто
+                    2 товара
                   </a>
                 </li>
               </ul>
@@ -88,54 +91,56 @@
           </header>
 
       	<main>
-      		<ul class="breadcrumbs">
-      			<li><a href="index.html">Главная</a></li>
-      			<li><a href="#">Каталог</a></li>
-      			<li class="current">Сливочное</li>
-      		</ul>
+          <div class="breadcrumbs-wrapper">
+        		<ul class="breadcrumbs">
+        			<li><a href="index.html">Главная</a></li>
+        			<li><a href="#">Каталог</a></li>
+        			<li class="current">Сливочное</li>
+        		</ul>
+          </div>
 
           <h1>Сливочное мороженое</h1>
 
       		<section class="filter">
             <h2 class="visually-hidden">Фильтр поиска</h2>
       			<form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
-              <div class="feedback-form-group sorting-form">
-                <label for="sorting">Сортировка:</label>
-                <select name="sorting" id="sorting">
+              <fieldset class="filter-form-group sorting-form">
+                <legend>Сортировка:</legend>
+                <select name="sorting" id="sorting" class="sort">
                   <option value="popular">по популярности</option>
                   <option value="low-price">сначала недорогие</option>
                   <option value="high-price">сначала дорогие</option>
                   <option value="fat">по жирности</option>
                 </select>
-              </div>
-              <div class="feedback-form-group price-form">
-                <label for="price">Цена: 100 руб. – 500 руб.</label>
+              </fieldset>
+              <fieldset class="filter-form-group price-form">
+                <legend>Цена: 100 руб. – 500 руб.</legend>
                 <input type="range" min="0" max="700" name="price" id="price" step="100">
-              </div>
-              <fieldset class="feedback-form-group fat-form">
+              </fieldset>
+              <fieldset class="filter-form-group fat-form">
                 <legend>Жирность</legend>
-                <ul>
-                  <li>
+                <ul class="fat">
+                  <li class="fat-0">
                     <input type="radio" name="fat-group" id="0-proc" value="0-procent">
                     <label for="0-proc">0%</label>
                   </li>
-                  <li>
+                  <li class="fat-10">
                     <input type="radio" name="fat-group" id="10-proc" value="10-procent" checked>
                     <label for="10-proc"> <10%</label>
                   </li>
-                  <li>
+                  <li class="fat-30">
                     <input type="radio" name="fat-group" id="30-proc" value="30-procent">
                     <label for="30-proc"> <30%</label>
                   </li>
-                  <li>
+                  <li class="fat-more-30">
                     <input type="radio" name="fat-group" id="more-30-proc" value="more-30-procent">
                     <label for="more-30-proc">выше 30%</label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="feedback-form-group topping-form">
+              <fieldset class="filter-form-group topping-form">
                 <legend>Наполнители:</legend>
-                <ul>
+                <ul class="topping">
                   <li>
                     <input type="checkbox" name="topping-group" id="chocolate" value="chocolate" checked>
                     <label for="chocolate">шоколадные</label>
@@ -161,14 +166,14 @@
             </form>
       		</section>
 
-      		<section class="catalog clearfix">
+      		<section class="catalog-items clearfix">
       			<h2 class="visually-hidden">Каталог товаров</h2>
       			<ul class="catalog-items-list">
       				<li class="catalog-item">
                 <p class="catalog-image">
       					 <img src="img/citrus.jpg" width="267" height="267" alt="Фотография мороженого">
                 </p>
-      					<p class="price">310 P<span class="small">/кг</span></p><!--Знак рубля в свг-->
+      					<p class="price">310 P<span class="small">/кг</span></p>
       					<a href="#" class="description">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                 <button type="button" class="btn fast-btn">Быстрый просмотр</button>
       				</li>
@@ -275,20 +280,24 @@
 
       	</main>
 
-      	<footer class="page-footer">
+        <footer class="page-footer">
       		<ul class="footer-social">
-            <li><a class="social-button" href="#" aria-label="Твиттер">Твиттер</a></li>
-      			<li><a class="social-button" href="#" aria-label="Инстаграм">Инстаграм</a></li>
-      			<li><a class="social-button" href="#" aria-label="Фейсбук">Фейсбук</a></li>
-      			<li><a class="social-button" href="#" aria-label="Вконтакте">Вконтакте</a></li>
+      			<li><a class="social social-twitter" href="#" aria-label="Твиттер"></a></li>
+      			<li><a class="social social-instagram" href="#" aria-label="Инстаграм"></a></li>
+      			<li><a class="social social-fb" href="#" aria-label="Фейсбук"></a></li>
+      			<li><a class="social social-vk" href="#" aria-label="Вконтакте"></a></li>
       		</ul>
 
-      		<ul class="footer-documents">
-      			<li><a href="#"><b>Для поставщиков</b></a></li>
-      			<li><a href="#">О производстве</a></li>
-      			<li><a href="#">Наши документы</a></li>
-      			<li><a href="#">Экологические стандарты</a></li>
-      		</ul>
+      		<div class="footer-documents">
+            <div class="col-1">
+      			  <li><a href="#"><b>Для поставщиков</b></a></li>
+      			  <li><a href="#">О производстве</a></li>
+            </div>
+            <div class="col-2">
+        			<li><a href="#">Наши документы</a></li>
+        			<li><a href="#">Экологические стандарты</a></li>
+            </div>
+      		</div>
 
       		<div class="footer-copyright">
       			<a href="https://htmlacademy.ru/intensive/htmlcss" class="html-academy-logo"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy"></a>
@@ -299,25 +308,27 @@
     </div>
   </div>
 
-    <section class="basket">
+    <section class="modal-basket">
       <table class="chosen-items-list">
         <tr class="chosen-item">
           <td class="close"><button class="modal-close" aria-label="Удалить товар из корзины">x</button></td>
-          <td class="chosen-item-image"><img src="#" width="33" height="33" alt="Фотография мороженого"></td>
+          <td class="chosen-item-image"><img src="img/citrus.jpg" width="33" height="33" alt="Фотография мороженого"></td>
           <td class="chosen-item-description">Пломбир с апельсиновым джемом</td>
-          <td class="chosen-item-weigth">1,5 кг x 200 руб.</td>
+          <td class="chosen-item-weigth">1,5 кг x <span class="gray">200 руб.</span></td>
           <td class="chosen-item-price">300 руб.</td>
         </tr>
         <tr class="chosen-item">
           <td class="close"><button class="modal-close" aria-label="Удалить товар из корзины">x</button></td>
-          <td class="chosen-item-image"><img src="#" width="33" height="33" alt="Фотография мороженого"></td>
+          <td class="chosen-item-image"><img src="img/strawberry.jpg" width="33" height="33" alt="Фотография мороженого"></td>
           <td class="chosen-item-description">Клубничный пломбир с присыпкой из белого шоколада</td>
-          <td class="chosen-item-weigth">1,5 кг x 300 руб.</td>
+          <td class="chosen-item-weigth">1,5 кг x <span class="gray">300 руб.</span></td>
           <td class="chosen-item-price">450 руб.</td>
         </tr>
       </table>
-      <p>Итого: 750р.</p>
-      <a href="#" class="btn">Оформить заказ</a>
+      <div class="buy-wrapper">
+        <p class="total">Итого: 750р.</p>
+        <a href="#" class="btn basket-btn">Оформить заказ</a>
+      </div>
     </section>
 
   </body>
