@@ -115,7 +115,7 @@
               </fieldset>
 
               <fieldset class="filter-form-group price-form">
-                <div class="price-title">Цена: <span>100 руб.</span> – <span>500 руб.</span></div>
+                <legend>Цена: <span>100 руб.</span> – <span>500 руб.</span></legend>
                 <div class="range-controls">
                   <div class="range-scale"><div class="range-bar"></div></div>
                   <div class="range-toggle  range-toggle-min"></div>
@@ -306,7 +306,7 @@
 
       	</main>
 
-        <footer class="page-footer">
+        <footer class="page-footer catalog-footer">
       		<ul class="footer-social">
       			<li><a class="social social-twitter" href="#" aria-label="Твиттер"></a></li>
       			<li><a class="social social-instagram" href="#" aria-label="Инстаграм"></a></li>
@@ -340,14 +340,14 @@
           <td class="close"><button class="modal-close" aria-label="Удалить товар из корзины">x</button></td>
           <td class="chosen-item-image"><img src="img/citrus.jpg" width="33" height="33" alt="Фотография мороженого"></td>
           <td class="chosen-item-description">Пломбир с апельсиновым джемом</td>
-          <td class="chosen-item-weigth">1,5 кг x <span class="gray">200 руб.</span></td>
+          <td class="chosen-item-weight">1,5 кг x <span class="gray">200 руб.</span></td>
           <td class="chosen-item-price">300 руб.</td>
         </tr>
         <tr class="chosen-item">
           <td class="close"><button class="modal-close" aria-label="Удалить товар из корзины">x</button></td>
           <td class="chosen-item-image"><img src="img/strawberry.jpg" width="33" height="33" alt="Фотография мороженого"></td>
           <td class="chosen-item-description">Клубничный пломбир с присыпкой из белого шоколада</td>
-          <td class="chosen-item-weigth">1,5 кг x <span class="gray">300 руб.</span></td>
+          <td class="chosen-item-weight">1,5 кг x <span class="gray">300 руб.</span></td>
           <td class="chosen-item-price">450 руб.</td>
         </tr>
       </table>
@@ -357,5 +357,14 @@
       </div>
     </section>
 
+    <script>
+    var basket = document.querySelector(".basket");
+    var modalb = document.querySelector(".modal-basket");
+
+    basket.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modalb.classList.add("modal-show");
+    });
+    </script>
   </body>
 </html>

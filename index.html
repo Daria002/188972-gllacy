@@ -196,7 +196,7 @@
         		  </article>
 
               <div class="subscribe-wrapper">
-        		    <section class="subscribe"> <!--сделать фон градиентом-->
+        		    <section class="subscribe">
                   <h2 class="visually-hidden">Подписка на новости</h2>
         			    <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         		      <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
@@ -209,11 +209,10 @@
             </div>
           </main>
           </div>
-        </div>
+
 
     		<section class="map">
     			<div class="pin"></div>
-          <div class="container">
             <div class="container-inner">
               <div class="contacts">
                 <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -222,39 +221,40 @@
           			<a class="btn feedback-btn" href="#">Форма обратной связи</a>
           		</div>
             </div>
-          </div>
     		</section>
 
 
-      <div class="container">
-    	  <footer class="page-footer">
-      		<ul class="footer-social">
-      			<li><a class="social social-twitter" href="#" aria-label="Твиттер"></a></li>
-      			<li><a class="social social-instagram" href="#" aria-label="Инстаграм"></a></li>
-      			<li><a class="social social-fb" href="#" aria-label="Фейсбук"></a></li>
-      			<li><a class="social social-vk" href="#" aria-label="Вконтакте"></a></li>
-      		</ul>
 
-      		<div class="footer-documents">
-            <ul class="col-1">
-      			  <li><a href="#"><b>Для поставщиков</b></a></li>
-      			  <li><a href="#">О производстве</a></li>
-            </ul>
-            <ul class="col-2">
-        			<li><a href="#">Наши документы</a></li>
-        			<li><a href="#">Экологические стандарты</a></li>
-            </ul>
-      		</div>
+        <div class="container-inner">
+      	  <footer class="page-footer">
+        		<ul class="footer-social">
+        			<li><a class="social social-twitter" href="#" aria-label="Твиттер"></a></li>
+        			<li><a class="social social-instagram" href="#" aria-label="Инстаграм"></a></li>
+        			<li><a class="social social-fb" href="#" aria-label="Фейсбук"></a></li>
+        			<li><a class="social social-vk" href="#" aria-label="Вконтакте"></a></li>
+        		</ul>
 
-      		<div class="footer-copyright">
-      			<a href="https://htmlacademy.ru/intensive/htmlcss" class="html-academy-logo"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy"></a>
-      			<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2018</p>
-      		</div>
-      	</footer>
+        		<div class="footer-documents">
+              <ul class="col-1">
+        			  <li><a href="#"><b>Для поставщиков</b></a></li>
+        			  <li><a href="#">О производстве</a></li>
+              </ul>
+              <ul class="col-2">
+          			<li><a href="#">Наши документы</a></li>
+          			<li><a href="#">Экологические стандарты</a></li>
+              </ul>
+        		</div>
+
+        		<div class="footer-copyright">
+        			<a href="https://htmlacademy.ru/intensive/htmlcss" class="html-academy-logo"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy"></a>
+        			<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2018</p>
+        		</div>
+        	</footer>
+        </div>
       </div>
     </div>
 
-  	<section class="modal modal-feedback"><!-- форма обратной связи-->
+  	<section class="modal modal-feedback">
       <h2>Мы обязательно вам ответим!</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="feedback-name">Ваше имя</label>
@@ -263,7 +263,7 @@
         <input type="email" id="feedback-email" name="feedback-email" placeholder="Ваша почта для ответа?"><br>
         <label class="visually-hidden" for="message">Ваше сообщение</label>
         <textarea name="message" id="message" rows="6" cols="20" placeholder="Напишите что-нибудь"></textarea>
-        <button type="submit" class="btn feedback-btn">Отправить</button>
+        <button type="submit" class="btn modal-feedback-btn">Отправить</button>
       </form>
       <button class="modal-close" aria-label="Закрыть форму обратной связи">Закрыть</button>
     </section>
@@ -286,5 +286,23 @@
       </div>
     </section>
 
+
+    <script>
+    var link = document.querySelector(".login");
+    var popup = document.querySelector(".modal-login");
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+    });
+
+      var feedback = document.querySelector(".feedback-btn");
+      var modalf = document.querySelector(".modal-feedback");
+
+      feedback.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modalf.classList.add("modal-show");
+      });
+    </script>
   </body>
  </html>
