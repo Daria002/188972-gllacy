@@ -122,11 +122,6 @@ a:active {
   position: relative;
 }
 
-.topmenu .current-page {
-  background-color: #e74b36;
-  border-radius: 20px;
-}
-
 .topmenu-item a {
   display: inline-block;
   font-size: 16px;
@@ -137,6 +132,13 @@ a:active {
   padding-top: 5px;
   margin-right: 13px;
   margin-left: 15px;
+}
+
+.current-page a {
+  background-color: #e74b36;
+  border-radius: 20px;
+  margin: 0;
+  padding: 5px 14px;
 }
 
 .topmenu-item > a:hover {
@@ -247,7 +249,6 @@ a:active {
 }
 
 .search a {
-  position: relative;
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -290,23 +291,23 @@ a:active {
 }
 
 .user-navigation a {
+  display: inline-block;
   border-bottom: 0;
   vertical-align: bottom;
-
 }
 
 .user-navigation a:hover {
   color: #323232;
 }
 
-.user-navigation .login {
+.user-navigation .login a {
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.2);
   position: relative;
   padding: 8px 17px 9px 44px;
 }
 
-.user-navigation .login::before {
+.user-navigation .login a::before {
   content: "";
   position: absolute;
   left: 16px;
@@ -316,30 +317,30 @@ a:active {
   background-image: url("../img/enter.svg");
 }
 
-.user-navigation .login:hover {
+.login a:hover {
   color: #323232;
   background-color: #f8f7f4;
 }
 
-.user-navigation .login:hover::before {
+.login a:hover::before {
    background-color: #f8f7f4;
    background-image: url("../img/entrance.svg");
    background-repeat: no-repeat;
 }
 
-.user-navigation .basket {
+.basket a {
   position: relative;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.2);
   padding: 8px 34px 8px 44px;
 }
 
-.user-navigation .basket:hover {
+.basket a:hover {
   color: #323232;
   background-color: #f8f7f4;
 }
 
-.user-navigation .basket::before {
+.basket a::before {
   content: "";
   position: absolute;
   left: 16px;
@@ -349,31 +350,31 @@ a:active {
   background-image: url("../img/basket.svg");
 }
 
-.user-navigation .basket:hover::before {
+.basket a:hover::before {
    background-color: #f8f7f4;
    background-image: url("../img/basket-hover.svg");
    background-repeat: no-repeat;
 }
 
-.user-navigation .basket-full {
-  padding: 8px 16px 8px 39px;
-  width: 118px;
-  color: #323232;
+.basket-full a {
+  padding: 8px 16px 8px 40px;
+  width: 60px;
   background-color: #f8f7f4;
+  color: #323232;
 }
 
 
-.user-navigation .basket-full::before {
+.basket-full a::before {
   content: "";
   position: absolute;
-  left: 12px;
+  left: 16px;
   top: 6px;
   width: 21px;
   height: 20px;
   background-image: url("../img/basket-red.svg");
 }
 
-.user-navigation .basket-full:hover::before {
+.basket-full a:hover::before {
    background-color: #f8f7f4;
    background-image: url("../img/basket-red.svg");
    background-repeat: no-repeat;
@@ -677,7 +678,7 @@ a:active {
 
 .range-bar {
   position: absolute;
-  left: 35px;
+  left: 33px;
   width: 96px;
   height: 4px;
   background-color: #f8f7f4;
@@ -923,6 +924,7 @@ a:active {
   text-decoration: none;
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-left: 10px;
 }
 
 .popular-item a:hover,
@@ -1193,7 +1195,7 @@ a:active {
   left: 265px;
 }
 
-/*.yandex-map {
+iframe {
   position: absolute;
   top: 0;
   right: 0;
@@ -1201,7 +1203,7 @@ a:active {
   left: 0;
   background-color: red;
   z-index: 2;
-}*/
+}
 
 /*__________________________ОКНО КОНТАКТОВ___________________________________*/
 
@@ -1234,6 +1236,10 @@ a:active {
   padding-bottom: 0px;
 }
 
+.contacts .order {
+  padding-top: 17px;
+}
+
 .contacts .phone {
   font-size: 18px;
 }
@@ -1247,72 +1253,93 @@ a:active {
   font-size: 18px;
   line-height: 24px;
   display: inline-block;
-  margin-top: 7px;
-  padding: 12px 23px;
+  margin-top: 26px;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 8px;
+  padding-bottom: 12px;
 }
 /*___________________________ПАГИНАТОР__________________________________*/
 .paginator {
-    margin: 20px 4px 39px 950px;
+    margin: 20px 4px 29px 950px;
     padding-left: 30px;
     padding-right: 16px;
     padding-top: 21px;
     position: relative;
 }
-.disabled,
-.disabled::before {
-    border-color: rgba(255, 255, 255, 0.2);
+
+.paginator .disabled {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+.paginator .disabled:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: default;
+}
+
 .page {
-    border-radius: 50%;
-    color: #fff;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18px;
-    padding: 4px 8px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: top;
-    border: 0;
+  display: inline-block;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  width: 25px;
+  height: 21px;
+  padding-top: 4px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  border: 0;
 }
+
 .prev {
-    left: 9px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  position: absolute;
+  left: 8px;
+  top: 29px;
+  transform: rotate(45deg);
 }
-.next,
-.prev {
-    border-bottom: 2px solid #fff;
-    border-left: 2px solid #fff;
-    height: 9px;
-    position: absolute;
-    top: 58px;
-    width: 9px;
+
+.prev:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
-.current-page,
-.page .current-page:hover {
+
+.next {
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  position: absolute;
+  left: 184px;
+  top: 29px;
+  transform: rotate(225deg);
+}
+
+.next:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.current-number,
+.page .current-number:hover {
     background-color: #ffffff;
 }
-.paginator .current-page,
+.paginator .current-number,
 .page:active {
     color: #323232;
 }
-.next {
-    right: 14px;
-    transform: rotate(-135deg);
-}
-.next,
-.prev {
-    border-bottom: 2px solid #fff;
-    border-left: 2px solid #fff;
-    height: 9px;
-    position: absolute;
-    top: 30px;
-    width: 9px;
-}
+
 .page:hover {
-    background-color: rgba(255, 255, 255, 0.2)
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
 }
 .page:active{
     background-color: #ffffff;
@@ -1326,6 +1353,7 @@ a:active {
 
 .catalog-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
 }
 
 .footer-social {
@@ -1587,7 +1615,7 @@ a:active {
   right: 27px;
   z-index: 10;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-
+  display: none;
 }
 
 .modal-basket img {
