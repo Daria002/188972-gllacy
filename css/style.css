@@ -6,6 +6,7 @@ body {
   line-height: 22px;
   font-weight: bold;
   color: #ffffff;
+  background-color: #849d8f;
 }
 
 .site-wrapper {
@@ -891,6 +892,7 @@ a:active {
   top:180px;
   font-size: 45px;
   line-height: 45px;
+  white-space: nowrap;
 }
 
 .popular-item .ruble {
@@ -924,7 +926,6 @@ a:active {
   text-decoration: none;
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  margin-left: 10px;
 }
 
 .popular-item a:hover,
@@ -945,7 +946,8 @@ a:active {
   border-radius: 5px;
 }
 
-.catalog-item .fast-btn {
+.catalog-item .fast-btn,
+.popular-item .fast-btn {
   font-weight: bold;
   margin-top: 11px;
   margin-bottom: 21px;
@@ -968,7 +970,8 @@ a:active {
   z-index: 10;
 }
 
-.catalog-item:hover .fast-btn {
+.catalog-item:hover .fast-btn,
+.popular-item:hover .fast-btn {
   visibility: visible;
 }
 
@@ -994,7 +997,7 @@ a:active {
   background-image: url("../img/wafer.jpg");
   background-color: #f9efd4;
   margin-bottom: 40px;
-  margin-top: 16px;
+  margin-top: -50px;
   border-radius: 15px;
   padding-top: 26px;
   padding-right: 19px;
@@ -1148,7 +1151,7 @@ a:active {
 }
 
 .subscribe-wrapper form {
-  display: inline-block;
+  display: flex;
 }
 
 .subscribe input[type="email"] {
@@ -1230,23 +1233,40 @@ iframe {
   margin-top: 2px
 }
 
-.contacts .address {
-  font-size: 18px;
-  line-height: 24px;
-  padding-bottom: 0px;
+.address {
+    width: 222px;
+    margin-top: 12px;
 }
-
-.contacts .order {
-  padding-top: 17px;
+.address p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #323232;
+    padding-top: 10px;
+    font-weight: normal;
+    margin: 0;
 }
-
-.contacts .phone {
-  font-size: 18px;
+.address b {
+    font-size: 18px;
+    line-height: 24px;
+    color: #323232;
 }
-
-.contacts .working-time {
-  font-size: 14px;
-  font-weight: normal;
+.phone-order {
+    width: 222px;
+    margin-top: 18px;
+}
+.phone-order p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #323232;
+    padding-top: 0px;
+    padding-bottom: 8px;
+    font-weight: normal;
+    margin: 0;
+}
+.phone-order b {
+    font-size: 18px;
+    line-height: 24px;
+    color: #323232;
 }
 
 .feedback-btn {
@@ -1459,7 +1479,7 @@ iframe {
   left: 810px;
   z-index: 10;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-  display: none;
+
 }
 
 .modal-show {
@@ -1484,6 +1504,7 @@ iframe {
   line-height: 24px;
   font-weight: bold;
   padding: 13px 25px 11px 24px;
+  width: 50%;
 }
 
 .modal-login a {

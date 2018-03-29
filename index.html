@@ -89,8 +89,8 @@
                 </li>
               </ul>
               <div class="info">
-                <span class="working-hours">С 10 до 20, ежедневно</span><br>
-                <span class="phone">8 812 450-25-25</span>
+                <div class="working-hours">С 10 до 20, ежедневно</div>
+                <div class="phone">8 812 450-25-25</div>
               </div>
             </div>
           </header>
@@ -152,6 +152,7 @@
                   </p>
         					<p class="price">310<span class="weight">/кг</span></p> <!--знак рубля в свг-->
         					<a href="#" class="description">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                  <button type="button" class="btn fast-btn">Быстрый просмотр</button>
         				</li>
                 <li class="popular-item">
                   <p class="popular-image">
@@ -159,6 +160,7 @@
                   </p>
                   <p class="price">380<span class="weight">/кг</span></p>
                   <a href="#" class="description">Сливочно-кофейное с кусочками шоколада</a>
+                  <button type="button" class="btn fast-btn">Быстрый просмотр</button>
                 </li>
         				<li class="popular-item">
         					<p class="popular-image">
@@ -166,6 +168,7 @@
         					</p>
         					<p class="price">355<span class="weight">/кг</span></p>
         					<a href="#" class="description">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                  <button type="button" class="btn fast-btn">Быстрый просмотр</button>
         				</li>
         				<li class="popular-item">
         					<p class="popular-image">
@@ -173,6 +176,7 @@
         					</p>
         					<p class="price">415<span class="weight">/кг</span></p>
         					<a href="#" class="description">Сливочное крем-брюле с карамельной подливкой</a>
+                  <button type="button" class="btn fast-btn">Быстрый просмотр</button>
         				</li>
         			</ul>
         		</section>
@@ -199,7 +203,7 @@
         		    <section class="subscribe">
                   <h2 class="visually-hidden">Подписка на новости</h2>
         			    <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        		      <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+                  <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
                     <label class="visually-hidden" for="subscribe-email">Электронная почта</label>
                     <input type="email" id="subscribe-email" name="subscribe-email" placeholder="Электронная почта">
                     <button type="submit" class="btn subscribe-btn">Отправить</button>
@@ -216,8 +220,15 @@
             <div class="container-inner">
               <div class="contacts">
                 <h2 class="visually-hidden">Как до нас добраться</h2>
-          			<p>Адрес главного офиса<br> и офлайн-магазина:</p> <span class="address">ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</span>
-          			<p class="order">Для заказов по телефону:</p> <span class="phone">8 812 450-25-25</span><br> <span class="working-time">(с 10 до 20 ежедневно)</span>
+                <div class="address">
+          			  <p>Адрес главного офиса и офлайн-магазина:</p>
+                  <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+                </div>
+                <div class="phone-order">
+          			  <p>Для заказов по телефону:</p> 
+                  <b>8 812 450-25-25</b>
+                  <p>(с 10 до 20 ежедневно)</p>
+                </div>
           			<a class="btn feedback-btn" href="#">Форма обратной связи</a>
           		</div>
             </div>
@@ -258,9 +269,9 @@
       <h2>Мы обязательно вам ответим!</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="feedback-name">Ваше имя</label>
-        <input type="text" id="feedback-name" name="feedback-name" placeholder="Как вас зовут?"><br>
+        <input type="text" id="feedback-name" name="feedback-name" placeholder="Как вас зовут?">
         <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-        <input type="email" id="feedback-email" name="feedback-email" placeholder="Ваша почта для ответа?"><br>
+        <input type="email" id="feedback-email" name="feedback-email" placeholder="Ваша почта для ответа?">
         <label class="visually-hidden" for="message">Ваше сообщение</label>
         <textarea name="message" id="message" rows="6" cols="20" placeholder="Напишите что-нибудь"></textarea>
         <button type="submit" class="btn modal-feedback-btn">Отправить</button>
@@ -273,10 +284,9 @@
     <section class="modal modal-login">
     	<form class="user-form" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="user-email">Электронная почта</label>
-        <input type="email" id="user-email" name="user-email" placeholder="Электронная почта"><br>
+        <input type="email" id="user-email" name="user-email" placeholder="Электронная почта">
         <label class="visually-hidden" for="user-password">Пароль</label>
         <input type="password" id="user-password" name="user-password" placeholder="Пароль">
-      </form>
       <div class="bottom-login">
         <button type="submit" class="btn login-btn">Войти</button>
         <div class="modal-links">
@@ -284,6 +294,7 @@
         	<a href="#">Новая регистрация</a>
         </div>
       </div>
+      </form>
     </section>
 
 
