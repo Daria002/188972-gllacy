@@ -12,7 +12,7 @@
       <div class="container">
         <div class="container-inner">
           <header class="main-header">
-            <a class="header-logo">
+            <a href="index.html" class="header-logo">
               <img src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop">
             </a>
             <nav class="main-nav">
@@ -73,14 +73,51 @@
                 </div>
                 </li>
                 <li class="login">
-                  <a href="#">
-                    Вход
-                  </a>
-                </li>
+                           <a class="link-login" href="#">
+                           Вход
+                           </a>
+                           <div class="modal modal-login">
+                                    <form class="user-form" action="https://echo.htmlacademy.ru" method="post">
+                                       <label class="visually-hidden" for="user-email">Электронная почта</label>
+                                       <input type="email" id="user-email" name="user-email" placeholder="Электронная почта">
+                                       <label class="visually-hidden" for="user-password">Пароль</label>
+                                       <input type="password" id="user-password" name="user-password" placeholder="Пароль">
+                                       <div class="bottom-login">
+                                          <button type="submit" class="btn login-btn">Войти</button>
+                                          <div class="modal-links">
+                                             <a href="#">Забыли пароль?</a>
+                                             <a href="#">Новая регистрация</a>
+                                          </div>
+                                       </div>
+                                    </form>
+                                 </div>
+                        </li>
                 <li class="basket basket-full">
                   <a href="#">
                     2 товара
                   </a>
+                  <div class="modal-basket">
+      <table class="chosen-items-list">
+        <tr class="chosen-item">
+          <td class="delete"><button class="delete-btn delete-btn-first" aria-label="Удалить товар из корзины">Удалить</button></td>
+          <td class="chosen-item-image"><img src="img/citrus.jpg" width="33" height="33" alt="Фотография мороженого"></td>
+          <td class="chosen-item-description">Пломбир с апельсиновым джемом</td>
+          <td class="chosen-item-weight">1,5 кг x <span class="gray">200 руб.</span></td>
+          <td class="chosen-item-price">300 руб.</td>
+        </tr>
+        <tr class="chosen-item">
+          <td class="delete"><button class="delete-btn delete-btn-second" aria-label="Удалить товар из корзины">Удалить</button></td>
+          <td class="chosen-item-image"><img src="img/strawberry.jpg" width="33" height="33" alt="Фотография мороженого"></td>
+          <td class="chosen-item-description">Клубничный пломбир с присыпкой из белого шоколада</td>
+          <td class="chosen-item-weight">1,5 кг x <span class="gray">300 руб.</span></td>
+          <td class="chosen-item-price">450 руб.</td>
+        </tr>
+      </table>
+      <div class="buy-wrapper">
+        <p class="total">Итого: 750р.</p>
+        <a href="#" class="btn basket-btn">Оформить заказ</a>
+      </div>
+    </div>
                 </li>
               </ul>
               <div class="info">
@@ -89,8 +126,9 @@
               </div>
             </div>
           </header>
-
+        </div>
       	<main>
+          <div class="container-inner">
           <div class="breadcrumbs-wrapper">
         		<ul class="breadcrumbs">
         			<li><a href="index.html">Главная</a></li>
@@ -123,76 +161,60 @@
                 </div>
               </fieldset>
 
-              <fieldset class="filter-form-group fat-form">
-                <legend>Жирность</legend>
-                <ul class="fat">
-                  <li class="fat-0">
-                    <label class="fat-radio">
-                    <input class="visually-hidden" type="radio" name="fat-group" id="0-proc" value="0-procent">
-                    <span class="radio-indicator"></span>
-                    0%</label>
-                  </li>
-                  <li class="fat-10">
-                    <label class="fat-radio">
-                    <input class="visually-hidden" type="radio" name="fat-group" id="10-proc" value="10-procent" checked>
-                    <span class="radio-indicator"></span>
-                    до 10%</label>
-                  </li>
-                  <li class="fat-30">
-                    <label class="fat-radio">
-                    <input class="visually-hidden" type="radio" name="fat-group" id="30-proc" value="30-procent">
-                    <span class="radio-indicator"></span>
-                    до 30%</label>
-                  </li>
-                  <li class="fat-more-30">
-                    <label class="fat-radio">
-                    <input class="visually-hidden" type="radio" name="fat-group" id="more-30-proc" value="more-30-procent">
-                    <span class="radio-indicator"></span>
-                    выше 30%</label>
-                  </li>
-                </ul>
-              </fieldset>
+               <fieldset class="filter-form-group fat-form">
+                            <legend>Жирность:</legend>
+                            <ul class="fat-list">
+                              <li>
+                                <input type="radio" id="0-proc" value="0" name="fatness" class="visually-hidden fat-radio">
+                                <label for="0-proc">0%</label>
+                              </li>
+                              <li>
+                                <input type="radio" id="10-proc" value="10" name="fatness" class="visually-hidden fat-radio" checked>
+                                <label for="10-proc">до 10%</label>
+                              </li>
+                              <li>
+                                <input type="radio" id="30-proc" value="30" name="fatness" class="visually-hidden fat-radio">
+                                <label for="30-proc">до 30%</label>
+                              </li>
+                              <li>
+                                <input type="radio" id="more-30-proc" value="more30" name="fatness" class="visually-hidden fat-radio">
+                                <label for="more-30-proc">выше 30%</label>
+                              </li>
+                            </ul>
+                        </fieldset>
+             
               <fieldset class="filter-form-group topping-form">
-                <legend>Наполнители:</legend>
-                <ul class="topping">
-                  <li>
-                    <label class="topping-checkbox">
-                      <input class="visually-hidden" type="checkbox" name="topping-group" id="chocolate" value="chocolate" checked>
-                      <span class="checkbox-indicator"></span>
-                      шоколадные
-                    </label>
-                  </li>
-                  <li>
-                      <label class="topping-checkbox">
-                        <input class="visually-hidden" type="checkbox" name="topping-group" id="sugar" value="sugar" checked>
-                        <span class="checkbox-indicator"></span>
-                      сахарные присыпки</label>
-                  </li>
-                  <li>
-                      <label class="topping-checkbox">
-                        <input class="visually-hidden" type="checkbox" name="topping-group" id="fruit" value="friut">
-                        <span class="checkbox-indicator"></span>
-                      фрукты</label>
-                  </li>
-                  <li>
-                      <label class="topping-checkbox">
-                        <input class="visually-hidden" type="checkbox" name="topping-group" id="syrop" value="syrop">
-                        <span class="checkbox-indicator"></span>
-                      сиропы</label>
-                  </li>
-                  <li>
-                      <label class="topping-checkbox">
-                        <input class="visually-hidden" type="checkbox" name="topping-group" id="jam" value="jam">
-                        <span class="checkbox-indicator"></span>
-                      джемы</label>
-                  </li>
-                </ul>
-              </fieldset>
+                            <legend>Наполнители:</legend>
+                            <ul class="topping">
+                              <li>
+                                <input type="checkbox" id="chocolate" value="chocolate" name="topping-group" class="visually-hidden topping-check" checked>
+                                <label for="chocolate">шоколадные</label>
+                              </li>
+                              <li>
+                                <input type="checkbox" id="sugar" value="sugar" name="topping-group" class="visually-hidden topping-check" checked>
+                                <label for="sugar">сахарные присыпки</label>
+                              </li>
+                              <li>
+                                <input type="checkbox" id="fruit" value="fruit" name="topping-group" class="visually-hidden topping-check">
+                                <label for="fruit">фрукты</label>
+                              </li>
+                              <li>
+                                <input type="checkbox" id="syrup" value="syrup" name="topping-group" class="visually-hidden topping-check">
+                                <label for="syrup">сиропы</label>
+                              </li>
+                              <li>
+                                <input type="checkbox" id="jam" value="jam" name="topping-group" class="visually-hidden topping-check">
+                                <label for="jam">джемы</label>
+                              </li>
+                            </ul>    
+                        </fieldset>
+
               <button type="submit" class="sorting-btn">Применить</button>
             </form>
       		</section>
-
+          </div>
       		<section class="catalog-items clearfix">
+            <div class="catalog-wrapper">
       			<h2 class="visually-hidden">Каталог товаров</h2>
       			<ul class="catalog-items-list">
       				<li class="catalog-item">
@@ -291,8 +313,11 @@
       					<a href="#" class="description">Сливочное с мятным сиропом</a>
                 <button type="button" class="btn fast-btn">Быстрый просмотр</button>
       				</li>
-      			</ul>
 
+      			</ul>
+          </div>
+            </section>
+            <div class="container-inner">
       		<div class="paginator">
       			<a class="prev disabled" href="#prev"></a>
       			<a href="#1" class="page current-number">1</a>
@@ -302,10 +327,10 @@
       			<a href="#5" class="page">5</a>
       			<a class="next" href="#next"></a>
       		</div>
-          </section>
-
+          
+        </div>
       	</main>
-
+        <div class="container-inner">
         <footer class="page-footer catalog-footer">
       		<ul class="footer-social">
       			<li><a class="social social-twitter" href="#" aria-label="Твиттер"></a></li>
@@ -334,37 +359,7 @@
     </div>
   </div>
 
-    <section class="modal-basket">
-      <table class="chosen-items-list">
-        <tr class="chosen-item">
-          <td class="close"><button class="modal-close" aria-label="Удалить товар из корзины">x</button></td>
-          <td class="chosen-item-image"><img src="img/citrus.jpg" width="33" height="33" alt="Фотография мороженого"></td>
-          <td class="chosen-item-description">Пломбир с апельсиновым джемом</td>
-          <td class="chosen-item-weight">1,5 кг x <span class="gray">200 руб.</span></td>
-          <td class="chosen-item-price">300 руб.</td>
-        </tr>
-        <tr class="chosen-item">
-          <td class="close"><button class="modal-close" aria-label="Удалить товар из корзины">x</button></td>
-          <td class="chosen-item-image"><img src="img/strawberry.jpg" width="33" height="33" alt="Фотография мороженого"></td>
-          <td class="chosen-item-description">Клубничный пломбир с присыпкой из белого шоколада</td>
-          <td class="chosen-item-weight">1,5 кг x <span class="gray">300 руб.</span></td>
-          <td class="chosen-item-price">450 руб.</td>
-        </tr>
-      </table>
-      <div class="buy-wrapper">
-        <p class="total">Итого: 750р.</p>
-        <a href="#" class="btn basket-btn">Оформить заказ</a>
-      </div>
-    </section>
+    
 
-    <script>
-    var basket = document.querySelector(".basket");
-    var modalb = document.querySelector(".modal-basket");
-
-    basket.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      modalb.classList.add("modal-show");
-    });
-    </script>
   </body>
 </html>
