@@ -185,7 +185,7 @@ a:active
     display: flex;
 }
 
-.topmenu-item a
+.topmenu-item > a
 {
     font-size: 16px;
     font-weight: 700;
@@ -269,19 +269,21 @@ a:active
 .submenu-item
 {
     padding: 7px 20px;
-
-    border-radius: 3px;
 }
 
 .submenu-item:first-child
 {
     padding-top: 11px;
     padding-bottom: 10px;
+
+    border-radius: 5px;
 }
 
 .submenu-item:last-child
 {
     padding-bottom: 13px;
+
+    border-radius: 5px;
 }
 
 .submenu-item:first-child a
@@ -292,7 +294,7 @@ a:active
 .submenu-item:first-child::after
 {
     position: absolute;
-    top: 38px;
+    top: 36px;
     left: 6px;
 
     width: 128px;
@@ -331,9 +333,13 @@ a:active
 
 .submenu-item.current-item
 {
-    color: white;
     border: 0;
     background-color: #d07058;
+}
+
+.current-item a 
+{
+    color: #ffffff;
 }
 
 .user-navigation ul
@@ -387,7 +393,6 @@ a:active
     top: 36px;
     left: -309px;
 
-    display: inline-block;
     display: none;
 
     padding: 20px 15px;
@@ -430,7 +435,7 @@ a:active
     border-bottom: 0;
 }
 
-.user-navigation a:hover
+.user-navigation > a:hover
 {
     color: #323232;
 }
@@ -727,6 +732,10 @@ a:active
     border: 2px solid #fff;
     border-radius: 50%;
     background-color: transparent;
+}
+
+.slider-controls label:hover {
+	background-color: rgba(255,255,255, 0.4);
 }
 
 #product-1:checked ~ .site-wrapper
@@ -1168,6 +1177,8 @@ a:active
     margin-top: 20px;
     padding: 7px 26px;
 
+    cursor: pointer;
+
     color: #fff;
     border: 2px solid white;
     border-radius: 20px;
@@ -1364,11 +1375,6 @@ a:active
     background-repeat: no-repeat;
 }
 
-.popular-item:first-child::before
-{
-    left: 0;
-}
-
 /*Преимущества*/
 
 .features
@@ -1516,7 +1522,7 @@ a:active
     display: -ms-flexbox;
     display: flex;
 
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
     -ms-flex-line-pack: stretch;
     align-content: stretch;
@@ -1531,7 +1537,7 @@ a:active
     height: 220px;
     margin-right: 13px;
     padding-top: 23px;
-    padding-right: 250px;
+    padding-right: 245px;
     padding-left: 19px;
 
     border-radius: 15px;
@@ -1556,7 +1562,6 @@ a:active
     line-height: 30px;
 
     text-decoration: underline;
-    /*border-bottom: 2px solid #323232;*/
 
     color: #323232;
 }
@@ -1565,10 +1570,10 @@ a:active
 {
     width: 50%;
     min-height: 220px;
+    max-width: 560px;
     margin-left: 13px;
-    padding: 5px;
 
-    border-radius: 15px;
+
     border-radius: 15px;
     background-image: url('../img/bg-post.svg');
     background-repeat: no-repeat;
@@ -1576,7 +1581,11 @@ a:active
 
 .subscribe
 {
-    padding: 30px 21px;
+	margin: 5px;
+    padding-top:30px;
+    padding-left: 21px;
+    padding-right: 21px;
+    padding-bottom: 35px;
 
     border-radius: 10px;
     background-color: #f8f7f4;
@@ -1657,6 +1666,10 @@ a:active
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+.yandex-map iframe {
+	width: 100%;
 }
 
 /*Контакты*/
@@ -2047,7 +2060,7 @@ a:active
 
     position: absolute;
     z-index: 10;
-    top: 65px;
+    top: 60px;
     left: 810px;
 
     display: none;
@@ -2100,7 +2113,7 @@ a:active
 
     color: #323232;
     border-bottom: 1px solid rgba(50, 50, 50, .3);
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 
 .modal-login a:hover
@@ -2159,6 +2172,7 @@ a:active
 
     padding-top: 0;
     padding-bottom: 0;
+    margin: 0;
 }
 
 .feedback-form input[type='text'],
@@ -2291,15 +2305,15 @@ a:active
     line-height: 16px;
 
     position: absolute;
-    position: absolute;
+
     z-index: 10;
     top: 65px;
-    right: 27px;
+    right: 100px;
 
     display: none;
 
-    width: 543px;
-    padding: 19px 15px 20px 41px;
+    width: 525px;
+    padding: 19px 15px 20px 0px;
 
     color: #323232;
     border-radius: 10px;
@@ -2318,31 +2332,40 @@ a:active
     display: block;
 }
 
+.chosen-item .delete {
+	padding-left: 12px;
+	padding-right: 3px;
+	padding-bottom: 7px;
+}
+
 .modal-basket img
 {
     border-radius: 50%;
+
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 .modal-basket .chosen-item-description
 {
     width: 240px;
-    padding-right: 16px;
-    padding-left: 10px;
+    padding-right: 10px;
+    padding-left: 0px;
 }
 
 .modal-basket .chosen-item-weight
 {
-    width: 115px;
-    padding-right: 15px;
-    padding-left: 16px;
+    width: 120px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 
 .modal-basket .chosen-item-price
 {
-    width: 75px;
-    padding-right: 10px;
-    padding-left: 14px;
+    width: 70px;
+    padding-right: 0px;
+    padding-left: 10px;
 }
 
 .modal-basket .gray
@@ -2380,7 +2403,7 @@ a:active
 {
     position: absolute;
     top: 0;
-    left: -380px;
+    right: 0px;
 
     width: 510px;
     height: 1px;
@@ -2390,21 +2413,15 @@ a:active
     background-color: #cacac7;
 }
 
-.chosen-item
-{
-    position: relative;
-}
 
 .chosen-item .delete-btn
 {
     font-size: 0;
-
-    position: absolute;
-    top: 35px;
-    left: 16px;
+    position: relative;
 
     width: 16px;
     height: 16px;
+    padding: 0;
 
     cursor: pointer;
 
@@ -2412,17 +2429,13 @@ a:active
     background-color: #f8f7f4;
 }
 
-.chosen-item .delete-btn-second
-{
-    top: 85px;
-}
 
 .chosen-item .delete-btn::before,
 .chosen-item .delete-btn::after
 {
     position: absolute;
-    top: 8px;
-    right: -3px;
+    top: 7px;
+    right: -1px;
 
     width: 16px;
     height: 2px;
