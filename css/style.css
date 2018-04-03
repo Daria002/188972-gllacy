@@ -1933,7 +1933,7 @@ a:active
 
     border: 3px solid rgba(255, 255, 255, .5);
     border-radius: 50%;
-    background: #849d8f;
+    background-color: rgba(255,255,255,0);
 
 }
 
@@ -2130,6 +2130,24 @@ a:active
 }
 
 /*Фидбэк*/
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0.0;       
+    }
+    60% {
+        transform: scale(1.1);  
+    }
+    80% {
+        transform: scale(0.9);
+        opacity: 1; 
+    }   
+    100% {
+        transform: scale(1);
+        opacity: 1; 
+    }       
+}
 
 .modal-overlay
 {
@@ -2462,4 +2480,6 @@ a:active
 .modal-show
 {
     display: block;
+
+    animation: fadeIn 0.6s;
 }
