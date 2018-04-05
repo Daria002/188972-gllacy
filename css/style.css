@@ -25,6 +25,7 @@ html {
 .site-wrapper
 {
     width: 100%;
+    min-width: 1200px;
 
     -webkit-transition: background-image .5s ease, background-color .5s ease;
          -o-transition: background-image .5s ease, background-color .5s ease;
@@ -124,6 +125,8 @@ html {
     background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
     -webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
             box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+
+    border: none;
 }
 
 .btn:active
@@ -752,6 +755,13 @@ a:active
 	background-color: rgba(255,255,255, 0.4);
 }
 
+/*.slider-controls label[for='product-1']:focus,
+.slider-controls label[for='product-2']:focus,
+.slider-controls label[for='product-3']:focus {
+    outline: 1px solid #777;
+}*/
+
+
 #product-1:checked ~ .site-wrapper
 {
     background-color: #849d8f;
@@ -1001,6 +1011,10 @@ a:active
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
 }
 
+.range-toggle:focus {
+    outline: 1px solid #777;
+}
+
 .range-toggle-max
 {
     left: 132px;
@@ -1070,6 +1084,10 @@ a:active
     background-image: url('../img/radio-off.svg');
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.fat-radio:focus + label::before {
+    outline: 1px solid #777;
 }
 
 .fat-radio:checked + label::before
@@ -1147,6 +1165,10 @@ a:active
     background-image: url('../img/checkbox-off.svg');
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.topping-check:focus + label::before {
+    outline: 1px solid #777;
 }
 
 .topping-check:checked + label::before
@@ -1594,7 +1616,11 @@ a:active
     max-width: 300px;
     display: inline-block;
     vertical-align: center;
-    
+    border: none;
+}
+
+.blog a:hover {
+    color: #e84d37;
 }
 
 .subscribe-wrapper
@@ -2156,6 +2182,28 @@ a:active
     }       
 }
 
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-overlay
 {
     position: fixed;
@@ -2489,4 +2537,9 @@ a:active
     display: block;
 
     animation: fadeIn 0.6s;
+}
+
+.modal-error 
+{
+  animation: shake 0.6s;
 }
